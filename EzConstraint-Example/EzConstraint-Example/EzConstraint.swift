@@ -213,7 +213,7 @@ extension UIView {
     
     /// Constraint Width And Height with ratio Width/Height
     @discardableResult
-    func constraintWidthHeightRatio(_ multipler: CGFloat) -> Self {
+    func constraintAspectRatio(_ multipler: CGFloat) -> Self {
         widthAnchor.constraint(equalTo: heightAnchor, multiplier: multipler).isActive = true
         return self
     }
