@@ -138,7 +138,7 @@ extension UIView {
         case .xAxis:
             
             let selfAnchor = attribute.xAxisAnchor(self)
-            let anotherAnchor = anotherAttribute.xAxisAnchor(view)
+            let anotherAnchor = attribute.xAxisAnchor(view)
             selfAnchor.constraint(type,
                                   to: anotherAnchor,
                                   constant: constant)
@@ -146,7 +146,7 @@ extension UIView {
         case .yAxis:
             
             let selfAnchor = attribute.yAxisAnchor(self)
-            let anotherAnchor = anotherAttribute.yAxisAnchor(view)
+            let anotherAnchor = attribute.yAxisAnchor(view)
             selfAnchor.constraint(type,
                                   to: anotherAnchor,
                                   constant: constant)
