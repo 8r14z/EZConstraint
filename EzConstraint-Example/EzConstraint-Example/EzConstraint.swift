@@ -136,14 +136,20 @@ extension UIView {
         
         switch attribute.axis {
         case .xAxis:
-            attribute.xAxisAnchor(self).constraint(type,
-                                                   to: attribute.xAxisAnchor(view),
-                                                   constant: constant)
+            
+            let selfAnchor = attribute.xAxisAnchor(self)
+            let anotherAnchor = anotherAttribute.xAxisAnchor(view)
+            selfAnchor.constraint(type,
+                                  to: anotherAnchor,
+                                  constant: constant)
             
         case .yAxis:
-            attribute.yAxisAnchor(self).constraint(type,
-                                                   to: attribute.yAxisAnchor(view),
-                                                   constant: constant)
+            
+            let selfAnchor = attribute.yAxisAnchor(self)
+            let anotherAnchor = anotherAttribute.yAxisAnchor(view)
+            selfAnchor.constraint(type,
+                                  to: anotherAnchor,
+                                  constant: constant)
         }
         
         return self
